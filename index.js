@@ -10,7 +10,7 @@ class Personagem {
         this.resistencia = resistencia
     }
 
-    descricao = function () {
+    descricao() {
         console.log(`
         Nome: ${this.nome}
         Codinome: ${this.codinome}
@@ -25,12 +25,12 @@ class Personagem {
 
 const listaPersonagens = [
     new Personagem("Steve Rogers", "Capitão América", "Escudo americano", "", 85, 75, 80),
-    new Personagem("Thor Odinson", "Thor", "Mjolnir", "Stormbreaker", 100, 90, 90),
-    new Personagem("Bruce Banner", "Hulk", "", "", 60, 100, 95),
-    new Personagem("Tony Stark", "Homem de Ferro", "Armadura", "", 90, 90, 90),
-    new Personagem("Hank Pym", "Homem-Formiga", "Traje", "", 50, 90, 70),
-    new Personagem("Janet van Dyne", "Vespa", "Traje", "", 100, 10, 10),
-    new Personagem("Thanos de Titã", "Thanos", "Manoplas do Infinito", 100, 100, 100)
+    new Personagem("Thor Odinson", "Thor", "Mjolnir", "Stormbreaker", 100, 98, 90),
+    new Personagem("Bruce Banner", "Hulk", "", "", 60, 99, 95),
+    new Personagem("Tony Stark", "Homem de Ferro", "Armadura", "", 90, 90, 85),
+    new Personagem("Hank Pym", "Homem-Formiga", "Traje", "", 50, 95, 70),
+    new Personagem("Janet van Dyne", "Vespa", "Traje", "", 99, 10, 10),
+    new Personagem("Thanos de Titã", "Thanos", "Manoplas do Infinito", "", 80, 100, 100)
 ]
 
 
@@ -42,6 +42,9 @@ listaPersonagens.forEach((Personagem_01, index1) => {
         if (index1 > index2 || Personagem_01 === Personagem_02) {return} // Quem é o agente do futuro?
 
         console.log(`${Personagem_01.codinome} contra ${Personagem_02.codinome}!`)
+
+        Personagem_01.descricao()
+        Personagem_02.descricao()
 
         if (Personagem_01.velocidade > Personagem_02.velocidade) {
             console.log(`${Personagem_01.codinome} vence em Velocidade!`)
